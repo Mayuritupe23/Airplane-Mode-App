@@ -1,0 +1,21 @@
+2024-09-24 00:18:16,152 INFO ipython === bench console session ===
+2024-09-24 00:18:16,153 INFO ipython ride=frappe.get_doc("Ride Booking","cfs5fpmb44")
+2024-09-24 00:18:16,154 INFO ipython frappe.commit()
+2024-09-24 00:18:16,154 INFO ipython frappe.db.commit()
+2024-09-24 00:18:16,154 INFO ipython ride=frappe.get_doc("Ride Booking","cfs5fpmb44")
+2024-09-24 00:18:16,154 INFO ipython ride=frappe.get_doc("Ride Booking","16gjdc5u6j")
+2024-09-24 00:18:16,155 INFO ipython ride.order
+2024-09-24 00:18:16,155 INFO ipython ride.vehicle
+2024-09-24 00:18:16,155 INFO ipython ride.items
+2024-09-24 00:18:16,155 INFO ipython for item in ride.items:
+    
+    print(item.source,item.destination,item.distance)
+    
+2024-09-24 00:18:16,155 INFO ipython === session end ===
+2024-09-25 22:49:23,079 INFO ipython === bench console session ===
+2024-09-25 22:49:23,080 INFO ipython frappe.get_all(Ride "Booking", fields=["total_amount", "vehicle"])
+2024-09-25 22:49:23,081 INFO ipython frappe.get_all("Ride Booking", fields=["total_amount", "vehicle"])
+2024-09-25 22:49:23,082 INFO ipython frappe.get_all("Ride Booking", fields=["total_amount", "vehicle"],filters="docstatus":1)
+2024-09-25 22:49:23,082 INFO ipython frappe.get_all("Ride Booking", fields=["total_amount", "vehicle"],filters={"docstatus":1})
+2024-09-25 22:49:23,083 INFO ipython frappe.get_all("Ride Booking", fields=["total_amount", "vehicle"],filters={"docstatus":1})
+2024-09-25 22:49:23,083 INFO ipython === session end ===

@@ -1,0 +1,248 @@
+2024-09-23 13:51:22,125 DEBUG cd my-bench && python3 -m venv env
+2024-09-23 13:51:24,897 DEBUG cd my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-09-23 13:51:26,422 DEBUG cd my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet wheel
+2024-09-23 13:51:27,073 LOG Getting frappe
+2024-09-23 13:51:27,073 DEBUG cd my-bench/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2024-09-23 13:51:30,672 LOG Installing frappe
+2024-09-23 13:51:30,673 DEBUG cd /home/ng/my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade -e /home/ng/my-bench/apps/frappe 
+2024-09-23 13:51:57,455 DEBUG cd /home/ng/my-bench/apps/frappe && yarn install --check-files
+2024-09-23 13:52:48,507 DEBUG cd /home/ng/my-bench && sudo supervisorctl restart frappe:
+2024-09-23 13:52:48,699 WARNING cd /home/ng/my-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-09-23 13:52:48,699 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-09-23 13:52:48,700 DEBUG cd my-bench && bench build
+2024-09-23 13:52:48,812 INFO /home/ng/.local/bin/bench build
+2024-09-23 13:53:16,326 LOG setting up backups
+2024-09-23 13:53:16,334 LOG backups were set up
+2024-09-23 13:53:16,334 INFO Bench my-bench initialized
+2024-09-23 13:56:51,225 INFO /home/ng/.local/bin/bench get-app rentals https://github.com/Mayuritupe23/Rentals.git
+2024-09-23 13:56:51,233 LOG Getting Rentals
+2024-09-23 13:56:51,233 DEBUG cd ./apps && git clone https://github.com/Mayuritupe23/Rentals.git  --depth 1 --origin upstream
+2024-09-23 13:56:52,314 LOG Installing rentals
+2024-09-23 13:56:52,315 DEBUG cd /home/ng/my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade -e /home/ng/my-bench/apps/rentals 
+2024-09-23 13:56:54,152 DEBUG bench build --app rentals
+2024-09-23 13:56:54,266 INFO /home/ng/.local/bin/bench build --app rentals
+2024-09-23 13:56:56,288 DEBUG cd /home/ng/my-bench && sudo supervisorctl restart frappe:
+2024-09-23 13:56:56,468 WARNING cd /home/ng/my-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-09-23 13:56:56,469 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-09-23 13:59:14,762 INFO /home/ng/.local/bin/bench new-site mayuri.com
+2024-09-23 14:00:25,263 INFO /home/ng/.local/bin/bench --site mayuri.com install-app rentals
+2024-09-23 14:00:43,082 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-23 14:00:48,446 INFO /home/ng/.local/bin/bench start
+2024-09-23 14:00:48,778 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-23 14:00:48,808 INFO /home/ng/.local/bin/bench worker
+2024-09-23 14:00:48,832 INFO /home/ng/.local/bin/bench watch
+2024-09-23 14:00:48,874 INFO /home/ng/.local/bin/bench schedule
+2024-09-23 16:14:36,782 INFO /home/ng/.local/bin/bench --site mayuri.com migrate
+2024-09-23 16:15:18,411 INFO /home/ng/.local/bin/bench --site mayuri.com logs
+2024-09-23 18:00:02,004 INFO /home/ng/.local/bin/bench --verbose --site all backup
+2024-09-23 18:27:27,635 INFO /home/ng/.local/bin/bench start
+2024-09-23 18:27:28,075 INFO /home/ng/.local/bin/bench worker
+2024-09-23 18:27:28,103 INFO /home/ng/.local/bin/bench watch
+2024-09-23 18:27:28,114 INFO /home/ng/.local/bin/bench schedule
+2024-09-23 18:27:28,123 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-23 18:28:00,906 INFO /home/ng/.local/bin/bench start
+2024-09-23 18:28:01,300 INFO /home/ng/.local/bin/bench watch
+2024-09-23 18:28:01,381 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-23 18:28:01,421 INFO /home/ng/.local/bin/bench schedule
+2024-09-23 18:28:01,456 INFO /home/ng/.local/bin/bench worker
+2024-09-23 18:29:49,812 INFO /home/ng/.local/bin/bench --site mayuri.com mariadb
+2024-09-23 23:15:54,934 INFO /home/ng/.local/bin/bench --site mayuri.com mariadb
+2024-09-23 23:22:33,021 INFO /home/ng/.local/bin/bench --site mayuri.com console
+2024-09-24 00:00:01,747 INFO /home/ng/.local/bin/bench --verbose --site all backup
+2024-09-24 00:03:43,838 INFO /home/ng/.local/bin/bench --mayuri.com maigrate
+2024-09-24 00:03:55,500 INFO /home/ng/.local/bin/bench --site mayuri.com maigrate
+2024-09-24 00:04:05,395 INFO /home/ng/.local/bin/bench mayuri.com maigrate
+2024-09-24 00:04:12,456 INFO /home/ng/.local/bin/bench maigrate
+2024-09-24 00:05:06,687 INFO /home/ng/.local/bin/bench start
+2024-09-24 00:05:07,088 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 00:05:07,104 INFO /home/ng/.local/bin/bench watch
+2024-09-24 00:05:07,139 INFO /home/ng/.local/bin/bench worker
+2024-09-24 00:05:07,141 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 09:11:24,529 INFO /home/ng/.local/bin/bench start
+2024-09-24 09:11:24,866 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 09:11:24,887 INFO /home/ng/.local/bin/bench watch
+2024-09-24 09:11:24,891 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 09:11:24,928 INFO /home/ng/.local/bin/bench worker
+2024-09-24 12:00:01,355 INFO /home/ng/.local/bin/bench --verbose --site all backup
+2024-09-24 15:33:48,976 INFO /home/ng/.local/bin/bench start
+2024-09-24 15:33:49,391 INFO /home/ng/.local/bin/bench worker
+2024-09-24 15:33:49,402 INFO /home/ng/.local/bin/bench watch
+2024-09-24 15:33:49,411 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 15:33:49,457 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 16:43:29,290 INFO /home/ng/.local/bin/bench build
+2024-09-24 17:02:29,269 INFO /home/ng/.local/bin/bench build
+2024-09-24 17:03:06,201 INFO /home/ng/.local/bin/bench start
+2024-09-24 17:03:06,588 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 17:03:06,606 INFO /home/ng/.local/bin/bench worker
+2024-09-24 17:03:06,623 INFO /home/ng/.local/bin/bench watch
+2024-09-24 17:03:06,640 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 17:09:31,970 INFO /home/ng/.local/bin/bench start
+2024-09-24 17:09:32,326 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 17:09:32,331 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 17:09:32,351 INFO /home/ng/.local/bin/bench watch
+2024-09-24 17:09:32,387 INFO /home/ng/.local/bin/bench worker
+2024-09-24 17:33:01,512 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-24 17:33:06,819 INFO /home/ng/.local/bin/bench start
+2024-09-24 17:33:07,208 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 17:33:07,221 INFO /home/ng/.local/bin/bench worker
+2024-09-24 17:33:07,290 INFO /home/ng/.local/bin/bench watch
+2024-09-24 17:33:07,291 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 17:45:03,763 INFO /home/ng/.local/bin/bench --site mayuri.com
+2024-09-24 17:45:13,772 INFO /home/ng/.local/bin/bench --site mayuri.com build
+2024-09-24 17:45:57,928 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-24 17:46:02,823 INFO /home/ng/.local/bin/bench start
+2024-09-24 17:46:03,187 INFO /home/ng/.local/bin/bench watch
+2024-09-24 17:46:03,210 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 17:46:03,210 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 17:46:03,257 INFO /home/ng/.local/bin/bench worker
+2024-09-24 17:47:23,059 INFO /home/ng/.local/bin/bench --site mayuri.com build
+2024-09-24 19:12:05,784 INFO /home/ng/.local/bin/bench maigrate
+2024-09-24 19:12:09,891 INFO /home/ng/.local/bin/bench maigrat
+2024-09-24 19:12:47,814 INFO /home/ng/.local/bin/bench maigret
+2024-09-24 19:13:31,046 INFO /home/ng/.local/bin/bench migrate
+2024-09-24 19:14:25,271 INFO /home/ng/.local/bin/bench start
+2024-09-24 19:14:25,636 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 19:14:25,743 INFO /home/ng/.local/bin/bench worker
+2024-09-24 19:14:25,757 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 19:14:25,820 INFO /home/ng/.local/bin/bench watch
+2024-09-24 19:18:33,098 INFO /home/ng/.local/bin/bench migrate
+2024-09-24 19:26:54,359 INFO /home/ng/.local/bin/bench build
+2024-09-24 19:32:15,894 INFO /home/ng/.local/bin/bench set-config developer_mode 1
+2024-09-24 19:48:00,483 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-24 19:48:08,390 INFO /home/ng/.local/bin/bench start
+2024-09-24 19:48:08,727 INFO /home/ng/.local/bin/bench schedule
+2024-09-24 19:48:08,787 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-24 19:48:08,803 INFO /home/ng/.local/bin/bench watch
+2024-09-24 19:48:08,825 INFO /home/ng/.local/bin/bench worker
+2024-09-25 09:21:28,841 INFO /home/ng/.local/bin/bench start
+2024-09-25 09:21:29,191 INFO /home/ng/.local/bin/bench schedule
+2024-09-25 09:21:29,196 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-25 09:21:29,200 INFO /home/ng/.local/bin/bench worker
+2024-09-25 09:21:29,229 INFO /home/ng/.local/bin/bench watch
+2024-09-25 12:00:01,672 INFO /home/ng/.local/bin/bench --verbose --site all backup
+2024-09-25 22:11:05,337 INFO /home/ng/.local/bin/bench start
+2024-09-25 22:11:05,712 INFO /home/ng/.local/bin/bench worker
+2024-09-25 22:11:05,716 INFO /home/ng/.local/bin/bench watch
+2024-09-25 22:11:05,731 INFO /home/ng/.local/bin/bench schedule
+2024-09-25 22:11:05,851 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-25 22:41:17,681 INFO /home/ng/.local/bin/bench console
+2024-09-25 22:49:28,066 INFO /home/ng/.local/bin/bench console
+2024-09-25 23:27:50,368 INFO /home/ng/.local/bin/bench --site mayuri.com console
+2024-09-26 00:00:01,444 INFO /home/ng/.local/bin/bench --verbose --site all backup
+2024-09-26 09:26:31,793 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-26 09:26:41,937 INFO /home/ng/.local/bin/bench start
+2024-09-26 09:26:42,281 INFO /home/ng/.local/bin/bench schedule
+2024-09-26 09:26:42,305 INFO /home/ng/.local/bin/bench worker
+2024-09-26 09:26:42,310 INFO /home/ng/.local/bin/bench watch
+2024-09-26 09:26:42,350 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-26 09:27:51,554 INFO /home/ng/.local/bin/bench --site list
+2024-09-26 09:31:25,552 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-26 09:31:33,552 INFO /home/ng/.local/bin/bench workspace list
+2024-09-26 09:32:14,667 INFO /home/ng/.local/bin/bench version
+2024-09-26 09:46:29,388 INFO /home/ng/.local/bin/bench get-app erpnext --branch version-15
+2024-09-26 09:46:29,965 LOG Getting erpnext
+2024-09-26 09:46:29,965 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2024-09-26 09:46:35,746 LOG Installing erpnext
+2024-09-26 09:46:35,746 DEBUG cd /home/ng/my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade -e /home/ng/my-bench/apps/erpnext 
+2024-09-26 09:46:52,518 DEBUG cd /home/ng/my-bench/apps/erpnext && yarn install --check-files
+2024-09-26 09:46:53,330 DEBUG bench build --app erpnext
+2024-09-26 09:46:53,461 INFO /home/ng/.local/bin/bench build --app erpnext
+2024-09-26 09:47:36,626 DEBUG cd /home/ng/my-bench && sudo supervisorctl restart frappe:
+2024-09-26 09:47:36,844 WARNING cd /home/ng/my-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-09-26 09:47:36,845 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-09-26 09:51:27,911 INFO /home/ng/.local/bin/bench get-app erpnext --resolve-deps --branch version-15
+2024-09-26 09:51:36,202 LOG Getting erpnext
+2024-09-26 09:51:36,202 DEBUG cd ./apps && git clone erpnext --branch version-15 --depth 1 --origin upstream
+2024-09-26 09:51:36,204 WARNING cd ./apps && git clone erpnext --branch version-15 --depth 1 --origin upstream executed with exit code 128
+2024-09-26 09:51:36,204 WARNING /home/ng/.local/bin/bench get-app erpnext --resolve-deps --branch version-15 executed with exit code 1
+2024-09-26 09:52:50,308 INFO /home/ng/.local/bin/bench get-app erpnext https://github.com/frappe/erpnext --branch version-15 --resolve-deps
+2024-09-26 09:52:50,799 LOG Getting erpnext
+2024-09-26 09:52:50,799 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext --branch version-15 --depth 1 --origin upstream
+2024-09-26 09:52:56,584 LOG Installing erpnext
+2024-09-26 09:52:56,584 DEBUG cd /home/ng/my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade -e /home/ng/my-bench/apps/erpnext 
+2024-09-26 09:52:59,236 DEBUG cd /home/ng/my-bench/apps/erpnext && yarn install --check-files
+2024-09-26 09:52:59,626 DEBUG bench build --app erpnext
+2024-09-26 09:52:59,756 INFO /home/ng/.local/bin/bench build --app erpnext
+2024-09-26 09:53:03,095 DEBUG cd /home/ng/my-bench && sudo supervisorctl restart frappe:
+2024-09-26 09:53:03,312 WARNING cd /home/ng/my-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-09-26 09:53:03,312 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-09-26 09:53:22,169 INFO /home/ng/.local/bin/bench --site mayuri.com install-app erpnext
+2024-09-26 09:56:32,952 INFO /home/ng/.local/bin/bench --site mayuri.com backup
+2024-09-26 09:56:54,530 INFO /home/ng/.local/bin/bench new-site demo.com
+2024-09-26 09:58:45,918 INFO /home/ng/.local/bin/bench use demo.com
+2024-09-26 09:59:03,723 INFO /home/ng/.local/bin/bench get-app erpnext --branch version-15
+2024-09-26 09:59:06,469 INFO App moved from apps/erpnext to archived/apps/erpnext-2024-09-26
+2024-09-26 09:59:06,472 LOG Getting erpnext
+2024-09-26 09:59:06,474 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2024-09-26 09:59:12,479 LOG Installing erpnext
+2024-09-26 09:59:12,479 DEBUG cd /home/ng/my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade -e /home/ng/my-bench/apps/erpnext 
+2024-09-26 09:59:15,106 DEBUG cd /home/ng/my-bench/apps/erpnext && yarn install --check-files
+2024-09-26 09:59:15,694 DEBUG bench build --app erpnext
+2024-09-26 09:59:15,863 INFO /home/ng/.local/bin/bench build --app erpnext
+2024-09-26 09:59:19,622 DEBUG cd /home/ng/my-bench && sudo supervisorctl restart frappe:
+2024-09-26 09:59:19,842 WARNING cd /home/ng/my-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-09-26 09:59:19,842 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-09-26 09:59:30,002 INFO /home/ng/.local/bin/bench --site demo.com install-app erpnext
+2024-09-26 10:36:24,008 INFO /home/ng/.local/bin/bench drop site demo.com
+2024-09-26 10:36:24,014 WARNING /home/ng/.local/bin/bench drop site demo.com executed with exit code 2
+2024-09-26 10:36:49,664 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-26 11:04:27,633 INFO /home/ng/.local/bin/bench drop-site demo.com
+2024-09-26 11:05:30,514 INFO /home/ng/.local/bin/bench list-apps
+2024-09-26 11:07:03,375 INFO /home/ng/.local/bin/bench get-app erpnext
+2024-09-26 11:07:03,784 LOG Getting erpnext
+2024-09-26 11:07:03,784 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git  --depth 1 --origin upstream
+2024-09-26 11:07:08,472 LOG Installing erpnext
+2024-09-26 11:07:08,472 DEBUG cd /home/ng/my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade -e /home/ng/my-bench/apps/erpnext 
+2024-09-26 11:07:11,088 DEBUG cd /home/ng/my-bench/apps/erpnext && yarn install --check-files
+2024-09-26 11:07:11,481 DEBUG bench build --app erpnext
+2024-09-26 11:07:11,595 INFO /home/ng/.local/bin/bench build --app erpnext
+2024-09-26 11:07:25,168 DEBUG cd /home/ng/my-bench && sudo supervisorctl restart frappe:
+2024-09-26 11:07:25,365 WARNING cd /home/ng/my-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-09-26 11:07:25,365 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-09-26 11:22:25,136 INFO /home/ng/.local/bin/bench use mayuri.com
+2024-09-26 11:22:30,757 INFO /home/ng/.local/bin/bench start
+2024-09-26 11:22:31,164 INFO /home/ng/.local/bin/bench worker
+2024-09-26 11:22:31,245 INFO /home/ng/.local/bin/bench watch
+2024-09-26 11:22:31,263 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-26 11:22:31,296 INFO /home/ng/.local/bin/bench schedule
+2024-09-26 12:00:01,695 INFO /home/ng/.local/bin/bench --verbose --site all backup
+2024-09-26 12:31:33,839 INFO /home/ng/.local/bin/bench add-frappe-ui
+2024-09-26 12:33:55,484 INFO /home/ng/.local/bin/bench get-app frappe
+2024-09-26 15:47:05,452 INFO /home/ng/.local/bin/bench new-site airplane.com
+2024-09-26 15:47:52,080 INFO /home/ng/.local/bin/bench --site airplane.com install-app airplane_mode
+2024-09-26 15:51:32,202 INFO /home/ng/.local/bin/bench new-site airplane.com
+2024-09-26 15:51:43,624 INFO /home/ng/.local/bin/bench --site airplane.com install-app airplane_mode
+2024-09-26 15:52:41,985 INFO /home/ng/.local/bin/bench --site airplane.com install-app airplane_mode
+2024-09-26 16:01:07,257 INFO /home/ng/.local/bin/bench use airplane.com
+2024-09-26 16:01:12,234 INFO /home/ng/.local/bin/bench start
+2024-09-26 16:01:12,663 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-26 16:01:12,663 INFO /home/ng/.local/bin/bench schedule
+2024-09-26 16:01:12,689 INFO /home/ng/.local/bin/bench watch
+2024-09-26 16:01:12,727 INFO /home/ng/.local/bin/bench worker
+2024-09-26 16:04:44,159 INFO /home/ng/.local/bin/bench set-config developer_mode 1
+2024-09-26 16:05:28,917 INFO /home/ng/.local/bin/bench --site airplane.com install-app airplane_mode
+2024-09-26 16:07:04,072 INFO /home/ng/.local/bin/bench --site airplane.com install-app airplane_mode
+2024-09-26 16:47:27,213 INFO /home/ng/.local/bin/bench --site mayuri.com install-app airplane_mode
+2024-09-26 16:53:22,671 INFO /home/ng/.local/bin/bench --site mayuri.com install-app airplane_mode
+2024-09-26 16:53:39,072 INFO /home/ng/.local/bin/bench list apps
+2024-09-26 16:53:52,477 INFO /home/ng/.local/bin/bench list-apps
+2024-09-26 16:54:56,406 INFO /home/ng/.local/bin/bench build
+2024-09-26 16:55:42,256 INFO /home/ng/.local/bin/bench --site mayuri.com install-app airplane_mode
+2024-09-26 16:59:23,218 INFO /home/ng/.local/bin/bench get-app airplane_mode /home/ng/airplane_mode
+2024-09-26 16:59:23,230 LOG Getting Airplane-Mode-App
+2024-09-26 16:59:23,230 DEBUG cd ./apps && git clone /home/ng/airplane_mode --branch main --depth 1 --origin upstream
+2024-09-26 16:59:23,268 LOG Installing airplane_mode
+2024-09-26 16:59:23,268 DEBUG cd /home/ng/my-bench && /home/ng/my-bench/env/bin/python -m pip install --quiet --upgrade -e /home/ng/my-bench/apps/airplane_mode 
+2024-09-26 16:59:25,779 DEBUG bench build --app airplane_mode
+2024-09-26 16:59:25,938 INFO /home/ng/.local/bin/bench build --app airplane_mode
+2024-09-26 16:59:42,065 DEBUG cd /home/ng/my-bench && sudo supervisorctl restart frappe:
+2024-09-26 16:59:42,378 WARNING cd /home/ng/my-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-09-26 16:59:42,378 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-09-26 17:00:02,408 INFO /home/ng/.local/bin/bench list-apps
+2024-09-26 17:00:41,093 INFO /home/ng/.local/bin/bench --site airplane.com install-app airplane_mode
+2024-09-26 17:01:02,064 INFO /home/ng/.local/bin/bench use airplane.com
+2024-09-26 17:01:07,361 INFO /home/ng/.local/bin/bench start
+2024-09-26 17:01:07,733 INFO /home/ng/.local/bin/bench worker
+2024-09-26 17:01:07,805 INFO /home/ng/.local/bin/bench schedule
+2024-09-26 17:01:07,825 INFO /home/ng/.local/bin/bench serve --port 8001
+2024-09-26 17:01:07,867 INFO /home/ng/.local/bin/bench watch

@@ -1,0 +1,48 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_8cef92c7e3acb9af --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _8cef92c7e3acb9af | /usr/bin/gzip >> ./mayuri.com/private/backups/20240923_180002-mayuri_com-database.sql.gz
+
+Backup Summary for mayuri.com at 2024-09-23 18:00:02.719371
+Config  : /home/ng/my-bench/sites/mayuri.com/private/backups/20240923_180002-mayuri_com-site_config_backup.json 149.0B
+Database: /home/ng/my-bench/sites/mayuri.com/private/backups/20240923_180002-mayuri_com-database.sql.gz 234.6KiB
+Backup for Site mayuri.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_8cef92c7e3acb9af --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _8cef92c7e3acb9af | /usr/bin/gzip >> ./mayuri.com/private/backups/20240924_000002-mayuri_com-database.sql.gz
+
+Backup Summary for mayuri.com at 2024-09-24 00:04:29.169563
+Config  : /home/ng/my-bench/sites/mayuri.com/private/backups/20240924_000002-mayuri_com-site_config_backup.json 149.0B
+Database: /home/ng/my-bench/sites/mayuri.com/private/backups/20240924_000002-mayuri_com-database.sql.gz 241.4KiB
+Backup for Site mayuri.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_8cef92c7e3acb9af --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _8cef92c7e3acb9af | /usr/bin/gzip >> ./mayuri.com/private/backups/20240924_120001-mayuri_com-database.sql.gz
+
+Backup Summary for mayuri.com at 2024-09-24 12:00:02.336470
+Config  : /home/ng/my-bench/sites/mayuri.com/private/backups/20240924_120001-mayuri_com-site_config_backup.json 149.0B
+Database: /home/ng/my-bench/sites/mayuri.com/private/backups/20240924_120001-mayuri_com-database.sql.gz 243.9KiB
+Backup for Site mayuri.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_8cef92c7e3acb9af --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _8cef92c7e3acb9af | /usr/bin/gzip >> ./mayuri.com/private/backups/20240925_120001-mayuri_com-database.sql.gz
+
+Backup Summary for mayuri.com at 2024-09-25 12:00:02.563169
+Config  : /home/ng/my-bench/sites/mayuri.com/private/backups/20240925_120001-mayuri_com-site_config_backup.json 216.0B
+Database: /home/ng/my-bench/sites/mayuri.com/private/backups/20240925_120001-mayuri_com-database.sql.gz 251.6KiB
+Backup for Site mayuri.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_8cef92c7e3acb9af --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _8cef92c7e3acb9af | /usr/bin/gzip >> ./mayuri.com/private/backups/20240926_000001-mayuri_com-database.sql.gz
+
+Backup Summary for mayuri.com at 2024-09-26 00:00:02.529230
+Config  : /home/ng/my-bench/sites/mayuri.com/private/backups/20240926_000001-mayuri_com-site_config_backup.json 216.0B
+Database: /home/ng/my-bench/sites/mayuri.com/private/backups/20240926_000001-mayuri_com-database.sql.gz 275.6KiB
+Backup for Site mayuri.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_24813be16d88853c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _24813be16d88853c | /usr/bin/gzip >> ./demo.com/private/backups/20240926_120002-demo_com-database.sql.gz
+
+Backup Summary for demo.com at 2024-09-26 12:00:02.634196
+Config  : /home/ng/my-bench/sites/demo.com/private/backups/20240926_120002-demo_com-site_config_backup.json 127.0B
+Database: /home/ng/my-bench/sites/demo.com/private/backups/20240926_120002-demo_com-database.sql.gz 216.1KiB
+Backup for Site demo.com has been successfully completed
+File ./mayuri.com/private/backups/20240926_000001-mayuri_com-database.sql.gz is recent
+File ./mayuri.com/private/backups/20240926_000001-mayuri_com-site_config_backup.json is recent
+File ./mayuri.com/private/backups/20240925_120001-mayuri_com-database.sql.gz is older than 24 hours
+File ./mayuri.com/private/backups/20240926_095633-mayuri_com-database.sql.gz is recent
+File ./mayuri.com/private/backups/20240926_095633-mayuri_com-site_config_backup.json is recent
+File ./mayuri.com/private/backups/20240925_120001-mayuri_com-site_config_backup.json is older than 24 hours
+set -o pipefail; /usr/bin/mariadb-dump --user=_8cef92c7e3acb9af --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _8cef92c7e3acb9af | /usr/bin/gzip >> ./mayuri.com/private/backups/20240926_120002-mayuri_com-database.sql.gz
+
+Backup Summary for mayuri.com at 2024-09-26 12:00:03.037534
+Config  : /home/ng/my-bench/sites/mayuri.com/private/backups/20240926_120002-mayuri_com-site_config_backup.json 216.0B
+Database: /home/ng/my-bench/sites/mayuri.com/private/backups/20240926_120002-mayuri_com-database.sql.gz 277.3KiB
+Backup for Site mayuri.com has been successfully completed
