@@ -1,0 +1,32 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "\"doc.status==\\\"Scheduled\\\"\"",
+ "creation": "2024-10-01 18:15:17.200983",
+ "date_changed": "date_of_departure",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Flight",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Dear System Manager,</p>\n\n<p>The flight <strong>{{ doc.name }}</strong> operated by <strong>{{ doc.airplane }}</strong> is scheduled to depart on <strong>{{ frappe.utils.format_date(doc.date_of_departure, \"d MMMM, YYYY\") }}</strong> at <strong>{{ doc.time_of_departure }}</strong>.</p>\n\n<p>Please ensure all preparations are in place.</p>\n\n<p>Thank you!</p>\n",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2024-10-01 18:21:12.776241",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "",
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 1,
+ "subject": "Departs in 24 hours!"
+}

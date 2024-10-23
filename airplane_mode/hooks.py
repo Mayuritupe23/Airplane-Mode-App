@@ -242,3 +242,31 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# hooks.py
+
+# ... existing configurations ...
+
+
+# hooks.py
+
+# ... existing configurations ...
+
+# website_route_rules = [
+#     {"from_route": "/flights", "to_route": "airplane_flight"},
+#     {"from_route": "/flight/<name>", "to_route": "flight_detail"},
+# ]
+#
+
+# doc_events = {  
+#     "Airplane Ticket": {  
+#         "validate": "airplane_mode.airplane_ticket.AirplaneTicket.validate",  
+#         "before_insert": "airplane_mode.airplane_ticket.AirplaneTicket.before_insert",  
+#         "on_submit": "airplane_mode.airplane_ticket.AirplaneTicket.on_submit"  
+#     }  
+# }
+
+
+doctype_js = {
+    "Airline": "public/js/airline.js"
+}
+

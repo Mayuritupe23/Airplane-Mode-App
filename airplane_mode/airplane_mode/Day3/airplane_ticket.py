@@ -33,10 +33,7 @@ class AirplaneTicket(Document):
         seat_letter = random.choice(['A', 'B', 'C', 'D', 'E'])
         self.seat = f"{seat_number}{seat_letter}"
 
-    # def on_submit(self):
-    #     if self.status != 'Boarded':
-    #         frappe.throw("Cannot submit unless status is Boarded.")
-
+          
     def before_submit(self):
         # print(self.status, "hello")
         if self.status != "Boarded":
