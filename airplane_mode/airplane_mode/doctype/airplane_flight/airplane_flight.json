@@ -22,7 +22,9 @@
   "date_of_departure",
   "duration",
   "column_break_vwha",
-  "time_of_departure"
+  "time_of_departure",
+  "section_break_swaa",
+  "crew_member"
  ],
  "fields": [
   {
@@ -120,13 +122,23 @@
    "fieldname": "is_published",
    "fieldtype": "Check",
    "label": "Is_published?"
+  },
+  {
+   "fieldname": "section_break_swaa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crew_member",
+   "fieldtype": "Table",
+   "label": "Crew Member",
+   "options": "Crew Member"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-10-16 11:56:52.673591",
+ "modified": "2024-10-25 16:49:26.258264",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
