@@ -34,13 +34,13 @@ To set up this project locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-Copy code
+
 git clone https://github.com/your-username/airplane-mode-app.git
 ```
 2. Navigate to the project directory:
 
 ```bash
-Copy code
+
 cd airplane-mode-app
 ```
 3. Open index.html in your browser.
@@ -64,5 +64,5 @@ This project is licensed under the MIT License. See the License file for more de
 ## Contact
 For any questions or feedback, please contact:
 
-Name: Mayuri Tupe
-Email: mayuritupe23@navgurukul.org
+- Name: Mayuri Tupe
+- Email: mayuritupe23@navgurukul.org
