@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-08 12:06:03.619561",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_information_section",
+  "shop_number",
+  "shop_area",
+  "airport",
+  "column_break_lohx",
+  "shop_name",
+  "tenant",
+  "shop_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_information_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Information"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lohx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Specify units (e.g., square meters)",
+   "fieldname": "shop_area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Shop Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant Information",
+   "reqd": 1
+  },
+  {
+   "default": "Available",
+   "fieldname": "shop_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Shop Status",
+   "options": "Available\nOccupied",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-14 11:28:13.769699",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "shop_name"
+}

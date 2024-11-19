@@ -148,7 +148,7 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"airplane_mode.tasks.all"
 # 	],
@@ -161,10 +161,14 @@ app_license = "mit"
 # 	"weekly": [
 # 		"airplane_mode.tasks.weekly"
 # 	],
-# 	"monthly": [
-# 		"airplane_mode.tasks.monthly"
-# 	],
-# }
+	"monthly": [
+		"airplane_mode.airplane_mode.event.send_rent_reminder_email"
+   
+	],
+}
+
+
+
 
 # Testing
 # -------
@@ -264,9 +268,12 @@ app_license = "mit"
 #         "on_submit": "airplane_mode.airplane_ticket.AirplaneTicket.on_submit"  
 #     }  
 # }
+# Path: airplane_mode/hooks.py
+
+
+
 
 
 doctype_js = {
     "Airline": "public/js/airline.js"
 }
-

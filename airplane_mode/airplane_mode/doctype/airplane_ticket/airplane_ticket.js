@@ -31,5 +31,12 @@ frappe.ui.form.on('Airplane Ticket', {
             });
             d.show(); // Show the dialog
         });
+    },
+
+    validate: function(frm) {
+        let allowed_gate_numbers = ["A1", "A2", "B1", "B2", "C1", "C2"];
+        if (!allowed_gate_numbers.includes(frm.doc.gate_number)) {
+            frappe.throw(__("Invalid Gate Number. Please select a valid gate number."));
+        }
     }
 });

@@ -26,7 +26,8 @@
   "departure_time",
   "column_break_meeq",
   "duration_of_flight",
-  "amended_from"
+  "amended_from",
+  "gate_number"
  ],
  "fields": [
   {
@@ -153,12 +154,18 @@
    "fieldtype": "Data",
    "label": "Seat",
    "read_only": 1
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Select",
+   "label": "Gate Number",
+   "options": "A1\nA2\nB1\nB2\nC1\nC2"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-16 11:55:36.181739",
+ "modified": "2024-11-08 10:40:08.131686",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

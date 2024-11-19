@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "name1",
+  "employee_id",
   "role"
  ],
  "fields": [
@@ -23,15 +24,21 @@
    "label": "Role",
    "options": "Pilot\nCo-Pilot\nFlight Attendant",
    "reqd": 1
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-25 17:01:19.345276",
+ "modified": "2024-11-08 10:05:03.033672",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
- "name": "Crew Member",
+ "name": "Flight Crew Member",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "creation",

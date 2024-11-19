@@ -130,15 +130,16 @@
   {
    "fieldname": "crew_member",
    "fieldtype": "Table",
-   "label": "Crew Member",
-   "options": "Crew Member"
+   "label": "Crew Members",
+   "options": "Flight Crew Member",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-10-25 16:49:26.258264",
+ "modified": "2024-11-08 10:21:54.026481",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
