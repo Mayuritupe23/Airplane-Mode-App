@@ -1,7 +1,26 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title |e }}</h1>
-{% endblock %}
+    <h1>{{ doc.shop_name |e }}</h1>
+    <p><strong>Shop Number:</strong> {{ doc.shop_number }}</p>
+    <p><strong>Shop Area:</strong> {{ doc.shop_area }} Sq.m.</p>
+    <p><strong>Airport:</strong> {{ doc.airport }}</p>
+    
+    {% if doc.tenant %}
+        {% set tenant = frappe.get_doc("Tenant Information", doc.tenant) %}
+        <p><strong>Tenant:</strong> {{ tenant.tenant_name }}</p>
+    {% else %}
+        <p><strong>Tenant:</strong> Not Assigned</p>
+    {% endif %}
+    
+    <p><strong>Status:</strong> 
+        {% if doc.shop_status == 'Available' %}
+            <span class="badge badge-success">Available</span>
+        {% else %}
+            <span class="badge badge-danger">Occupied</span>
+        {% endif %}
+    </p>
 
-<!-- this is a sample default web page template -->
+    <!-- <a href="/available/new?clinic={{ doc.name }}" class="btn btn-info">Book Now</a> -->
+
+{% endblock %}

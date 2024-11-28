@@ -165,7 +165,14 @@ scheduler_events = {
 		"airplane_mode.airplane_mode.event.send_rent_reminder_email"
    
 	],
+	"cron": {
+		"11 23 * * *": [
+			"airplane_mode.hello.test_logging"
+		]
+	}
+
 }
+
 
 
 

@@ -1,4 +1,30 @@
-<div>
-	<a href="/{{ doc.route |e }}">{{ (doc.title or doc.name) |e }}</a>
-</div>
-<!-- this is a sample default list template -->
+<!-- 
+
+
+{% set available_shops = frappe.get_list('Shop', filters={'shop_status': 'Available'}, fields=['shop_name', 'shop_number', 'shop_area', 'tenant', 'airport']) %}
+
+<h2>Available Shops</h2>
+<h2>Available Shops (Total: {{ available_shops|length }})</h2>
+
+<div class="shop-list">
+    {% set seen_shops = [] %}
+    {% for shop in available_shops %}
+        {% if shop.shop_number not in seen_shops %}
+            {% set seen_shops = seen_shops + [shop.shop_number] %}
+            {% set tenant = frappe.get_doc("Tenant Information", shop.tenant) %}
+            {% set airport = frappe.get_doc("Airport", shop.airport) %}
+            
+            <div class="shop-item">
+                <h1>
+                    <a class="font-size-lg" href="{{ doc.route }}">{{ shop.shop_name }}</a>
+                    
+
+                </h1>
+                <p><strong>Shop Number:</strong> {{ shop.shop_number }}</p>
+                <p><strong>Area:</strong> {{ shop.shop_area }} Sq.m.</p>
+                <p><strong>Tenant:</strong> {{ tenant.tenant_name if tenant else "No Tenant Found" }}</p>
+                <p><strong>Airport:</strong> {{ airport.name if airport else "No Airport Found" }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div> -->

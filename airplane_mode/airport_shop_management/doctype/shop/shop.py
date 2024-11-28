@@ -2,10 +2,10 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 
 
-class Shop(Document):
+class Shop(WebsiteGenerator):
 	# This code goes in the Server Script for "Shop" Doctype
 # Path: your_app/your_module/doctype/shop/shop.py
 

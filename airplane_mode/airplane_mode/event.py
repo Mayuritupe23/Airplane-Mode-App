@@ -6,7 +6,7 @@ def send_rent_reminder_email():
 
     # Check if the enable_rent_reminder field is enabled
     if not settings.enable_rent_reminder:
-        frappe.msgprint("Please enable 'Rent Reminder' in Airport Shop Settings to send reminders.")
+        frappe.log("Please enable 'Rent Reminder' in Airport Shop Settings to send reminders.")
         return
 
     # Fetch rent payment records with linked tenant details
@@ -34,23 +34,20 @@ def send_rent_reminder_email():
         # If amount_paid is already set by default, use that value
         amount_paid = rent_payment.amount_paid if rent_payment.amount_paid else settings.default_rent_amount
 
-        # Prepare email subject and personalized message
+        # Prepare email subject and simple HTML message
         subject = "Rent Payment Reminder"
         message = f"""
-        Dear {tenant_name},
-
-        Greetings from Airport Shop Management Team!
-
-        We hope this email finds you well. This is a gentle reminder that your rent payment is due. Kindly make the payment at your earliest convenience to avoid any inconvenience.
-
-        If you have already made the payment, please ignore this reminder.
-
-        Rent Amount: {amount_paid}  
-
-        For any questions or assistance, feel free to contact our support team.
-
-        Best regards,  
-        Airport Shop Management Team  
+        <html>
+        <body>
+            <p>Dear {tenant_name},</p>
+            <p>Greetings from Airport Shop Management Team!</p>
+            <p>We hope this email finds you well. This is a gentle reminder that your rent payment is due. Kindly make the payment at your earliest convenience to avoid any inconvenience.</p>
+            <p>If you have already made the payment, please ignore this reminder.</p>
+            <p><strong>Rent Amount:</strong> {amount_paid}</p>
+            <p>For any questions or assistance, feel free to contact our support team.</p>
+            <p>Best regards,<br>Airport Shop Management Team</p>
+        </body>
+        </html>
         """
 
         # Send the email
@@ -58,11 +55,9 @@ def send_rent_reminder_email():
             recipients=[tenant_email],
             subject=subject,
             message=message,
-            delayed=False  # Sends the email immediately
+            delayed=False,  # Sends the email immediately
         )
         emails_sent += 1
 
     # Show a message with the count of emails sent
     frappe.msgprint(f"Rent reminder emails sent to {emails_sent} tenants.")
-
-
