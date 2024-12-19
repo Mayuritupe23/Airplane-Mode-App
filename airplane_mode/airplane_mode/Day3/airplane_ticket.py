@@ -28,10 +28,10 @@ class AirplaneTicket(Document):
     def before_insert(self):
         self.assign_seat()
 
-    def assign_seat(self):
-        seat_number = random.randint(1, 100)
-        seat_letter = random.choice(['A', 'B', 'C', 'D', 'E'])
-        self.seat = f"{seat_number}{seat_letter}"
+    # def assign_seat(self):
+    #     seat_number = random.randint(1, 100)
+    #     seat_letter = random.choice(['A', 'B', 'C', 'D', 'E'])
+    #     self.seat = f"{seat_number}{seat_letter}"
 
           
     def before_submit(self):

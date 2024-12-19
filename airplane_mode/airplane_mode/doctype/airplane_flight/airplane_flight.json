@@ -24,7 +24,8 @@
   "column_break_vwha",
   "time_of_departure",
   "section_break_swaa",
-  "crew_member"
+  "crew_member",
+  "amended_from"
  ],
  "fields": [
   {
@@ -133,13 +134,24 @@
    "label": "Crew Members",
    "options": "Flight Crew Member",
    "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Flight",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-08 10:21:54.026481",
+ "modified": "2024-12-18 12:24:37.741240",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

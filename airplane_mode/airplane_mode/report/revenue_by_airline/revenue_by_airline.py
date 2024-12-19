@@ -99,7 +99,7 @@ def execute(filters=None):
                 "values": list(revenue_by_airline.values()),
             }]
         },
-        "type": "Donut",  # Set the chart type to donut
+        "type": "donut",  # Set the chart type to donut
     }
 
     # Add total revenue to the chart data
@@ -109,4 +109,4 @@ def execute(filters=None):
     }
 
     # # Return the columns, results, and chart data
-    return columns, results, chart_data
+    return columns, results,None, chart_data

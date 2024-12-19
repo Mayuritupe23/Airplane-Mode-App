@@ -11,6 +11,7 @@ class AirplaneTicket(Document):
         self.prevent_duplicate_addons()
         self.calculate_total_amount()
         self.check_airplane_capacity()
+        self.assign_seat()
         # self.prevent_submission_if_not_boarded()
         # self.before_submit()
 
@@ -23,10 +24,10 @@ class AirplaneTicket(Document):
 
     def calculate_total_amount(self):
         total_addon_amount = sum(item.amount for item in self.add_ons) if self.add_ons else 0
-        self.total_amount = int(self.flight_price) + total_addon_amount
+        self.total_amount = (self.flight_price) + total_addon_amount
 
-    def before_insert(self):
-        self.assign_seat()
+    # def before_insert(self):
+    #     self.assign_seat()
 
     def assign_seat(self):
         seat_number = random.randint(1, 100)
@@ -38,7 +39,6 @@ class AirplaneTicket(Document):
     #         frappe.throw("Cannot submit unless status is Boarded.")
 
     def before_submit(self):
-        # print(self.status, "hello")
         if self.status != "Boarded":
             frappe.log("Current Ticket Status: {}".format(self.status))
             frappe.throw("cannot submit unless status is Boarded.")

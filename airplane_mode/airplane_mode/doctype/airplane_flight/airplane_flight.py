@@ -9,7 +9,7 @@ class AirplaneFlight(WebsiteGenerator):
 	def on_submit(self):
 		self.status="Completed"
 	
-		self.save()
+		
 	
 	
 	
